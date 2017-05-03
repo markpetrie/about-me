@@ -1,0 +1,13 @@
+#mainHeading {
+    color: darkcyan;
+    text-align: center;
+}
+
+p:first-of-type { 
+   color: white;
+   background-color: lightcoral;
+}
+
+body {
+    background-color: lightgray;
+}
