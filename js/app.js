@@ -1,5 +1,8 @@
 'use strict'
 
+var userName = prompt('Welcome to my About Me page! Let\'s play a quick guessing game to help you get to know me a little better. I\'ll ask you 5 yes/no questions about myself and you try to guess the correct answers. First things first, please introduce yourself by entering your full name below.');
+var personalWelcome = prompt('Nice to meet you, ' + userName + '. Here comes your first question. Good luck!');
+
 var questionOne = prompt('Would I rather spend a work bonus on travel over a new laptop? [enter yes or no]');
 console.log('First question answer = ' + questionOne + '.');
 if(questionOne.toLowerCase() === 'y' || questionOne.toLowerCase() === 'yes') {
@@ -45,3 +48,4 @@ if(questionFive.toLowerCase() === 'y' || questionFive.toLowerCase() === 'yes') {
 else {
     alert('Actually, I am! Being a web developer is pretty awesome.');
 }
+
