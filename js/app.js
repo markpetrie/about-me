@@ -79,7 +79,7 @@ if(questionSix === favoriteNumber) {
     console.log('Sixth question answer = ' + questionSix + '.');
     correctAnswerCount = correctAnswerCount +1; // increment correctAnswerCount by 1
     alert('Yes, ' + favoriteNumber + ' is my favorite number! Nice job.');
-    GuessedMyNumber = 'Yes';
+    guessedMyNumber = 'Yes';
     break;    
 }
 else {
@@ -105,31 +105,38 @@ console.log('Current correct answer count = ' + correctAnswerCount);
 
 var myCities = ["BEND", "ASHLAND", "MEDFORD", "SALEM", "CORVALLIS", "EUGENE"];
 var cityGuesses = [];
+var currentGuess;
 var maxCityGuesses = 6;
 var cityMatches = [];
 
 alert('I\'ve lived in 6 other cities in Oregon other than Portland. See how many you can guess. You get six guesses.');
 
-for(i = 0; i < 6; i++) {
-    var currentGuess = prompt('Enter your guess for city #' + i++).toUpperCase;
-    cityGuesses.push(currentGuess);
+for(var i = 0; i < 6; i++) {
+    cityGuesses.push(prompt('Enter your guess for a city').toUpperCase());
+    console.log('guess: ' + i +':' + cityGuesses);
 }
 
-for(j = 0; j < 6; j++) {
-    for(k = 0; k < 6; k++) {
-       if(cityGuesses[k] === myCitites[j]) {
+for(var myCitiesIndex = 0; myCitiesIndex < 6; myCitiesIndex++) {
+    console.log('we are in the first for loop');
+    for(var k = 0; k < 6; k++) {
+       console.log('in the second loop');
+       console.log(cityGuesses);
+       console.log(cityGuesses[k] + myCities[myCitiesIndex])
+       if(cityGuesses[k] === myCities[myCitiesIndex]) {
           // push match to cityMatches array
-          cityMatches.push(k);
+          cityMatches.push(cityGuesses[k]);
+          console.log('cityMatches: ' + cityMatches);
        }
     }    
 }
 
 //If cityMatches array has at least one match, display match(es) in alert. Otherwise, inform user they had 0 matches.
 if(cityMatches === 0) {
-    alert('Good try, but you got 0 correct. Here are the other cities in Oregon I used to call home: ' + myCities + '.');
+    alert('Good try, but you got 0 correct. Here are the other cities in Oregon I used to call home: ' + myCities.join(', ') + '.');
 }
 else {
-    alert('Congratulations, you got ' + length.cityMatches + 'correct! Here is the complete list of cities in Oregon I used to call home: ' + myCities + '.');
+    console.log('Current correct answer count = ' + correctAnswerCount);
+    alert('Congratulations, you got the following cities correct!: ' + cityMatches.join(', ') + '.');
     }
 
 // display concluding alert message with the total number of correct answers 
