@@ -19,6 +19,7 @@ else {
 }
 console.log('Current correct answer count = ' + correctAnswerCount);
 
+//Begin question 2
 var questionTwo = prompt('Did I ever play competitive badminton? [enter yes or no]');
 console.log('Second question answer = ' + questionTwo + '.');
 if(questionTwo.toLowerCase() === 'n' || questionTwo.toLowerCase() === 'no') {
@@ -30,6 +31,7 @@ else {
 }
 console.log('Current correct answer count = ' + correctAnswerCount); // increment correctAnswerCount by 1
 
+//Begin question 3
 var questionThree = prompt('Do I speak any languages other than English? [enter yes or no]');
 console.log('Third question answer = ' + questionThree + '.');
 if(questionThree.toLowerCase() === 'y' || questionThree.toLowerCase() === 'yes') {
@@ -41,6 +43,7 @@ else {
 }
 console.log('Current correct answer count = ' + correctAnswerCount);
 
+//Begin question 4
 var questionFour = prompt('Have I ever worked in a shipyard? [enter yes or no]');
 console.log('Fourth question answer = ' + questionFour + '.');
 if(questionFour.toLowerCase() === 'y' || questionFour.toLowerCase() === 'yes') {
@@ -53,6 +56,7 @@ else {
 }
 console.log('Current correct answer count = ' + correctAnswerCount);
 
+//Begin question 5
 var questionFive = prompt('Am I a web developer? [enter yes or no]');
 console.log('Fifth question answer = ' + questionFive + '.');
 if(questionFive.toLowerCase() === 'y' || questionFive.toLowerCase() === 'yes') {
@@ -64,20 +68,10 @@ else {
 }
 console.log('Current correct answer count = ' + correctAnswerCount);
 
-// var questionSix = parseInt(prompt('What is my favorite number? [hint: it\'s between 0 and 10]'));
-// var favoriteNumber = 7;
-// console.log('Sixth question answer = ' + questionSix + '.');
-// if(questionSix === favoriteNumber) {
-//     correctAnswerCount = correctAnswerCount +1; // increment correctAnswerCount by 1
-//     alert('Yes, 7 is my favorite number. Good guess!');
-// }
-// else {
-//     alert('The number ' + questionSix + ' is fine and all, but 7 is my lucky number. Nice try!');
-// }
-// console.log('Current correct answer count = ' + correctAnswerCount);
-
+//Begin question 6
 var maxGuesses = 4;
 var favoriteNumber = 7;
+var guessedMyNumber = 'No';
 
 for (var i = 0; i < maxGuesses; i++) {
 var questionSix = parseInt(prompt('What is my favorite number? [hint: it\'s between 0 and 10]'));
@@ -85,24 +79,59 @@ if(questionSix === favoriteNumber) {
     console.log('Sixth question answer = ' + questionSix + '.');
     correctAnswerCount = correctAnswerCount +1; // increment correctAnswerCount by 1
     alert('Yes, ' + favoriteNumber + ' is my favorite number! Nice job.');
+    GuessedMyNumber = 'Yes';
     break;    
 }
 else {
     if(questionSix > favoriteNumber) {
         console.log('Sixth question answer = ' + questionSix + '.');
         alert('My favorite number is lower than ' + questionSix + '.');
-     }
-    
-     else {
+    }
+        
+    else {
         console.log('Sixth question answer = ' + questionSix + '.');
         alert('My favorite number is higher than ' + questionSix + '.');
-          }
         }
-    }    
+    }
+}  
 
-    
+if(guessedMyNumber = 'No') {
+    alert('So close! My favorite number is ' + favoriteNumber + '.');
+}
+
 console.log('Current correct answer count = ' + correctAnswerCount);
 
+//Begin question 7
+
+var myCities = ["BEND", "ASHLAND", "MEDFORD", "SALEM", "CORVALLIS", "EUGENE"];
+var cityGuesses = [];
+var maxCityGuesses = 6;
+var cityMatches = [];
+
+alert('I\'ve lived in 6 other cities in Oregon other than Portland. See how many you can guess. You get six guesses.');
+
+for(i = 0; i < 6; i++) {
+    var currentGuess = prompt('Enter your guess for city #' + i++).toUpperCase;
+    cityGuesses.push(currentGuess);
+}
+
+for(j = 0; j < 6; j++) {
+    for(k = 0; k < 6; k++) {
+       if(cityGuesses[k] === myCitites[j]) {
+          // push match to cityMatches array
+          cityMatches.push(k);
+       }
+    }    
+}
+
+//If cityMatches array has at least one match, display match(es) in alert. Otherwise, inform user they had 0 matches.
+if(cityMatches === 0) {
+    alert('Good try, but you got 0 correct. Here are the other cities in Oregon I used to call home: ' + myCities + '.');
+}
+else {
+    alert('Congratulations, you got ' + length.cityMatches + 'correct! Here is the complete list of cities in Oregon I used to call home: ' + myCities + '.');
+    }
+
 // display concluding alert message with the total number of correct answers 
-alert('You got ' + correctAnswerCount + ' out of 5 questions correct. Wasn\'t that fun? Hopefully you feel like you know me a bit better now! Feel free to explore the rest of my About Me page.');
+alert('You got ' + correctAnswerCount + ' out of 7 questions correct. Wasn\'t that fun? Hopefully you feel like you know me a bit better now! Feel free to explore the rest of my About Me page.');
 
