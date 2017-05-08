@@ -60,9 +60,10 @@
             margin-bottom: 5px;
             margin-left: 25%;
             border: 15px solid #F4F7F6;
-            font-size: 12pt;
+            font-size: 11pt;
             padding-left: 5%;
             padding-right: 5%;
+            column-width: 30%;
            
         }
 
