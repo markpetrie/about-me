@@ -8,8 +8,8 @@
         html,
         body {
             height: 100vh;
-            margin: 0;
-            padding: 5;
+            margin: 0px;
+            padding: 5px;
         }
 
         thead {
@@ -38,52 +38,45 @@
             padding-top: 20px;
                 }
          #bio-paragraph {
-            width: 100%;
-            padding-left: 20px;
-            Padding-right: 20px;
-            text-align: justify;
-         }       
-
-        #left-col {
-            width: 50%;
-            float: left;
-            height: 100vh;
-            padding-left: 20px;
-            padding-right: 10px;
-        }
-
-        #right-col {
-            width: 50%;
-            float: right;
-            height: 100vh;
-            padding-right: 20px;
-        }
-
-        #work {
             display: inline-block;
-            width: calc(100% - 4px);
+            width: 50%;
             height: 300px;
             margin-top: 5px;
-            margin-right: 5px;
+            margin-right: 25%;
             margin-bottom: 5px;
-            margin-left: 5px;
+            margin-left: 25%;
             border: 15px solid #F4F7F6;
-            padding: 7px;
-            font-size: 9pt;
+            padding: 20px;
+            font-size: 12pt;
+            text-align: justify;
+         }
+
+          #work {
+            display: inline-block;
+            width: 50%;
+            height: 300px;
+            margin-top: 5px;
+            margin-right: 25%;
+            margin-bottom: 5px;
+            margin-left: 25%;
+            border: 15px solid #F4F7F6;
+            font-size: 12pt;
+            padding-left: 5%;
+            padding-right: 5%;
+           
         }
 
         #goals {
             display: inline-block;
-            width: calc(100% - 4px);
+            width: 50%;
             height: 300px;
             margin-top: 5px;
-            margin-right: 5px;
+            margin-right: 25%;
             margin-bottom: 5px;
-            margin-left: 5px;
+            margin-left: 25%;
             border: 15px solid #F4F7F6;
             padding: 7px;
-            font-size: 9pt;
-        }
-
-        
+            font-size: 12pt;
+            text-align: center;
+        }        
  
